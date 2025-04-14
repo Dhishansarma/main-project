@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Project Details{% endblock %}
+
+{% block content %}
+<div class="containerpro">
+    <div class="layer">
+        <div class="projectcon">
+            <div class="image-section">
+                <img src="{{ ardinoprojects.image.url|default:'/static/images/placeholder.jpg' }}" 
+                     alt="{{ ardinoprojects.title }}">
+            </div>
+            <!-- Title and Components (Left) and Image (Right) -->
+            <div class="left-section">
+                <h1>{{ ardinoprojects.title }}</h1>
+    
+                <!-- Components Section (Below Title) -->
+                <div class="components">
+                    <h3>Components</h3>
+                    <ul>
+                        {% if component_list %}
+                            {% for component in component %}
+                                <li>{{ component }}</li>
+                            {% empty %}
+                                <li>No components available</li>
+                            {% endfor %}
+                        {% else %}
+                            <li>No components available</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+    
+            
+        </div>
+    
+        <!-- Description Section (Below the Whole Block) -->
+        <div class="description-box">
+            <p>{{ ardinoprojects.description|safe  }}</p>
+        </div>
+    
+        <a href="{% url 'project' %}" class="buy-button">Buy</a>
+    </div>
+ {% endblock %}

@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ABTechVille{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/workshop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/career.css' %}">
+    <link rel="stylesheet" href="{% static 'css/photos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projectdetails.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projectlist.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'css/sample1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stake.css' %}">
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+ 
+    
+    <!-- <header>
+        <div class="logo">
+            <img src="{% static 'images/ABTechvillelogo.png' %}" alt="ABTechVille Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'photo' %}">Photos</a></li>
+                <li><a href="{% url 'careers' %}">Careers</a></li>
+                <li><a href="{% url 'event' %}">Events</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header> -->
+
+    <header>
+        <div class="logo"><img src="{% static 'images/ABTechvillelogo.png' %}" alt="ABTECHVILLE"></div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %} ">About Us</a></li>
+    
+            <!-- Products Dropdown -->
+            <li class="dropdown">
+              <a id="productsBtn">Products </a>
+              <div class="dropdown-menu" id="productsDropdown">
+                <a href="{% url 'about' %}">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+              </div>
+            </li>
+    
+            <!-- Services Dropdown -->
+            <li class="dropdown">
+              <a id="servicesBtn">Services </a>
+              <div class="dropdown-menu" id="servicesDropdown">
+                <a href="#">Support</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+              </div>
+            </li>
+            <li><a href="{% url 'team' %} ">Team</a></li>
+          </ul>
+        </nav>
+      </header>
+   
+
+
+
+    
+    
+    {% block content %}
+
+    {% endblock %}
+   
+    
+    {% include 'footer.html' %}  <!-- Include Footer -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const productsBtn = document.getElementById('productsBtn');
+          const productsDropdown = document.getElementById('productsDropdown');
+      
+          const servicesBtn = document.getElementById('servicesBtn');
+          const servicesDropdown = document.getElementById('servicesDropdown');
+      
+          // Toggle dropdown on click
+          productsBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            productsDropdown.classList.toggle('show');
+            servicesDropdown.classList.remove('show');
+          });
+      
+          servicesBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            servicesDropdown.classList.toggle('show');
+            productsDropdown.classList.remove('show');
+          });
+      
+          // Close dropdowns when clicking outside
+          window.addEventListener('click', function() {
+            productsDropdown.classList.remove('show');
+            servicesDropdown.classList.remove('show');
+          });
+        });
+      </script>
+      
+</body>
+</html>

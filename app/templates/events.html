@@ -1,0 +1,38 @@
+{% extends 'base.html' %}  <!-- Inherit from base.html -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - Careers{% endblock %}
+
+
+{% block content %}
+<main>
+    <h1>Upcoming Events</h1>
+    <p>Stay updated with our latest events and workshops.</p>
+
+    <section class="event-list">
+        <article class="event">
+            <h2>IoT Connected Minds: Ultimate Tech Experiences</h2>
+            <p><strong>Date:</strong> March 15, 2025</p>
+            <p><strong>Location:</strong> ABTechVille Headquarters</p>
+            <p>Join us for a deep dive into the latest IoT innovations with industry experts.</p>
+        </article>
+
+        <article class="event">
+            <h2>Photography & AI Workshop</h2>
+            <p><strong>Date:</strong> April 10, 2025</p>
+            <p><strong>Location:</strong> ABTechVille Studio</p>
+            <p>Explore how artificial intelligence is revolutionizing photography.</p>
+        </article>
+
+        <article class="event">
+            <h2>Cybersecurity Awareness Seminar</h2>
+            <p><strong>Date:</strong> May 5, 2025</p>
+            <p><strong>Location:</strong> Online (Zoom)</p>
+            <p>Learn the best practices to protect yourself in the digital age.</p>
+        </article>
+    </section>
+</main>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+

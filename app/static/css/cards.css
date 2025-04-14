@@ -1,0 +1,49 @@
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+    /* background-color: white; */
+  }
+  
+  .stat-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #00c0c7;
+    border-radius: 5px 5px 20px 20px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .icon {
+    font-size: 80px;
+    color: lightgray;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  
+  .number {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a1c61;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #0a1c61;
+    margin-top: 5px;
+    z-index: 1;
+    position: relative;
+  }
+  

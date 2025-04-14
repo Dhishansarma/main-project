@@ -1,0 +1,696 @@
+  /* Global Styles */
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+
+
+
+/* Event List Styles */
+
+
+/* Hero Section */
+/* .hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+} */
+
+/* History Section */
+.history-container {
+    /* background-color: #f4f7f9; */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.history-title {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 
+        -0.5px -0.5px 0 #ffffff,  
+        0.5px -0.5px 0 #ffffff,  
+        1px 1px 0 #ffffff,  
+        1px 1px 0 #ffffff; 
+}
+
+
+.history-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    /* background-color: #003366; */
+    margin: 10px auto;
+}
+
+.history-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    padding: 0 20px;
+}
+
+.history-content p {
+    margin-bottom: 20px;
+}
+
+.history-content strong {
+    /* color: #003366; */
+    font-weight: bold;
+}
+
+.history-content p:last-child {
+    margin-bottom: 0;
+}
+
+.history-container .history-content {
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    padding: 30px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+}
+
+.history-content p:first-child {
+    margin-top: 0;
+}
+
+.history-content p {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .history-container {
+        padding: 40px 15px;
+    }
+
+    .history-title {
+        font-size: 2em;
+    }
+
+    .history-content {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
+
+/* Main container */
+.main-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers all text inside */
+}
+
+/* Section Header */
+/* 
+@keyframes waveTransition {
+    0% {
+        background: linear-gradient(45deg, #003366, #ffffff, #000000);
+        background-size: 300% 300%;
+        transform: scale(1);
+    }
+    50% {
+        background: linear-gradient(45deg, #000000, #003366, #ffffff);
+        background-size: 300% 300%;
+        transform: scale(1.05);
+    }
+    100% {
+        background: linear-gradient(45deg, #ffffff, #000000, #003366);
+        background-size: 300% 300%;
+        transform: scale(1);
+    }
+} */
+
+.history-container {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    /* animation: waveTransition 6s infinite alternate ease-in-out; */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animated Background for History Section
+@keyframes waveTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+
+
+/* Grid Layout for Offerings & Projects */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Box Styling */
+.box {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 230px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* this keeps the image inside without stretching */
+    margin: auto;
+    border-radius: 15px;
+}
+
+/* Name Styling */
+.name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+}
+
+.cta-container {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.cta-box {
+    background-color: #2c2c2c;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cta-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-box:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #f79c42;
+    border-radius: 3px;
+}
+
+.cta-box h3 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Button Style */
+.cta-button {
+    background-color: #f79c42;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e6893c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    background-color: #d6792d;
+    transform: translateY(2px);
+}
+
+.cta-button span {
+    font-weight: 600;
+}
+
+.cta-button:focus {
+    outline: none;
+}
+
+.cta-button:focus-visible {
+    animation: buttonClickEffect 0.4s ease-out;
+}
+
+/* Animation when button is clicked */
+@keyframes buttonClickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .cta-container {
+        width: 100%;
+    }
+
+    .cta-button {
+        font-size: 1.1em;
+        padding: 14px 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .history-title {
+        font-size: 1.8em;
+    }
+
+    .history-content {
+        font-size: 1em;
+    }
+}
+
+
+.history-container {
+    padding: 60px 20px;
+    text-align: center;
+    animation: historyBgTransition 6s infinite alternate ease-in-out;
+}
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+}
+
+.cta-container {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.cta-box {
+    background-color: #2c2c2c;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cta-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-box:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #f79c42;
+    border-radius: 3px;
+}
+
+.cta-box h3 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Button Style */
+.cta-button {
+    background-color: #f79c42;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e6893c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    background-color: #d6792d;
+    transform: translateY(2px);
+}
+
+.cta-button span {
+    font-weight: 600;
+}
+
+.cta-button:focus {
+    outline: none;
+}
+
+.cta-button:focus-visible {
+    animation: buttonClickEffect 0.4s ease-out;
+}
+
+/* Animation when button is clicked */
+@keyframes buttonClickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .cta-container {
+        width: 100%;
+    }
+
+    .cta-button {
+        font-size: 1.1em;
+        padding: 14px 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .history-title {
+        font-size: 1.8em;
+    }
+
+    .history-content {
+        font-size: 1em;
+    }
+}
+
+/* Centering the Main Section */
+main {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px;
+    background: #e3edf7;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bcc6d7, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+}
+
+/* Hover Effect */
+main:hover {
+    box-shadow: 12px 12px 24px #bcc6d7, -12px -12px 24px #ffffff;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 33, 71, 0.2);
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Container for side-by-side layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Work Culture & Openings Section */
+.career-info {
+    flex: 1;
+    background: #e3edf7;
+    padding: 20px;
+    border-left: 5px solid #0044cc;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: inset 4px 4px 8px #bcc6d7, inset -4px -4px 8px #ffffff;
+}
+
+/* Application Form */
+.application-form {
+    flex: 1;
+    padding: 25px;
+    background: #e3edf7;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 12px #bcc6d7, inset -6px -6px 12px #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.application-form:hover {
+    transform: translateY(-3px);
+    box-shadow: inset 8px 8px 16px #bcc6d7, inset -8px -8px 16px #ffffff;
+}
+
+/* Form Labels */
+.application-form label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+    display: block;
+    color: #002147;
+}
+
+/* Input Fields */
+.application-form input,
+.application-form select,
+.application-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #e3edf7;
+    box-shadow: inset 3px 3px 6px #bcc6d7, inset -3px -3px 6px #ffffff;
+    transition: 0.3s ease-in-out;
+    color: #333;
+}
+
+/* Placeholder Color */
+.application-form input::placeholder,
+.application-form textarea::placeholder {
+    color: #777;
+}
+
+/* Input Focus */
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    box-shadow: inset 2px 2px 4px #bcc6d7, inset -2px -2px 4px #ffffff;
+    outline: none;
+}
+
+/* File Upload */
+input[type="file"] {
+    border: none;
+    background: none;
+    padding: 8px;
+}
+
+/* Checkbox & Terms */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #e3edf7;
+    box-shadow: 6px 6px 12px #bcc6d7, -6px -6px 12px #ffffff;
+    color: #002147;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #d6e2f0;
+    box-shadow: 4px 4px 8px #bcc6d7, -4px -4px 8px #ffffff;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Stack elements in small screens */
+    .container {
+        flex-direction: column;
+    }
+
+    .application-form input,
+    .application-form select,
+    .application-form textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+
+/*-------------------------------------------WORKSHOP----------------------*/
+
+
+/* General reset */
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #fff;
+}
+

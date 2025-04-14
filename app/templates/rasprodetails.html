@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Project Details{% endblock %}
+
+{% block content %}
+<div class="containerpro">
+    <div class="layer">
+        <div class="projectcon">
+           
+            <!-- Title and Components (Left) and Image (Right) -->
+            <div class="left-section">
+                <h1>{{ raspberry_project.title }}</h1>
+    
+                <!-- Components Section (Below Title) -->
+                <div class="components">
+                    <h3>Components</h3>
+                    <ul>
+                        {% if component_list %}
+                            {% for component in component_list %}
+                                <li>{{ component }}</li>
+                            {% empty %}
+                                <li>No components available</li>
+                            {% endfor %}
+                        {% else %}
+                            <li>No components available</li>
+                        {% endif %}
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="image-section">
+                <img src="{{ raspberry_project.image.url|default:'/static/images/placeholder.jpg' }}" 
+                     alt="{{ raspberry_project.title }}">
+            </div>
+            
+        </div>
+    
+        <!-- Description Section (Below the Whole Block) -->
+        <div class="description-box">
+            <p>{{ raspberry_project.description|safe  }}</p>
+        </div>
+    
+        <a href="{% url 'project' %}" class="buy-button">Buy</a>
+    </div>
+ {% endblock %}
+

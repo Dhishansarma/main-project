@@ -1,0 +1,115 @@
+{% extends 'base.html' %}  <!-- Inherit from base.html -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - Careers{% endblock %}
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+<section class="workshop-gallery">
+    <h2>Our Workshops on</h2>
+    <div class="gallery-grid">
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop1.png'%}" alt="Workshop 1">
+            <div class="workshop-name">Arduino UNO</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop2.png'%}" alt="Workshop 2">
+            <div class="workshop-name">Arduino Nano</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop3.jpg'%}" alt="Workshop 3">
+            <div class="workshop-name">Arduino Micro</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop4.jpg'%}" alt="Workshop 4">
+            <div class="workshop-name">Arduino UNO Mini</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop5.jpg'%}" alt="Workshop 5">
+            <div class="workshop-name">NodeMCU 8266</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop6.jpg'%}" alt="Workshop 6">
+            <div class="workshop-name">ESP 32</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop7.jpg'%}" alt="Workshop 7">
+            <div class="workshop-name">Raspberry Pi</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop8.png'%}" alt="Workshop 8">
+            <div class="workshop-name">MIT Application</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop9.png'%}" alt="Workshop 9">
+            <div class="workshop-name">Full Stack</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop10.png'%}" alt="Workshop 10">
+            <div class="workshop-name">Python</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop11.png'%}" alt="Workshop 11">
+            <div class="workshop-name">IoT With Web</div>
+        </div>
+        <div class="workshop-item">
+            <img src="{% static 'Images/workshop12.jpeg'%}" alt="Workshop 12">
+            <div class="workshop-name">GenAI</div>
+        </div>
+    </div>
+</section>
+
+<section class="workshop-form">
+    <h2>Book Your Workshop</h2>
+    <form id="workshopBookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+        
+        <label for="email">Mail ID:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="designation">Designation:</label>
+        <select id="designation" name="designation">
+            <option value="Faculty">Faculty</option>
+            <option value="Assistant Professor">Assistant Professor</option>
+            <option value="Professor">Professor</option>
+            <option value="HOD">HOD</option>
+            <option value="Professional">Professional</option>
+        </select>
+        
+        <label for="institute">Institute/Organization:</label>
+        <input type="text" id="institute" name="institute" required>
+        
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="Arduino UNO">Arduino UNO</option>
+            <option value="Arduino Nano">Arduino Nano</option>
+            <option value="Arduino Micro">Arduino Micro</option>
+            <option value="Arduino UNO Mini">Arduino UNO Mini</option>
+            <option value="NodeMCU 8266">NodeMCU 8266</option>
+            <option value="ESP 32">ESP 32</option>
+            <option value="Raspberry Pi">Raspberry Pi</option>
+            <option value="MIT Application">MIT Application</option>
+            <option value="Full Stack">Full Stack</option>
+            <option value="Python">Python</option>
+            <option value="IoT With Web">IoT With Web</option>
+            <option value="GenAI">GenAI</option>
+        </select>
+        
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <p id="confirmationMessage" style="display: none;">"Our team will review your request and contact you soon."</p>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+

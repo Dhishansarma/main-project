@@ -1,0 +1,77 @@
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fbfd;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  } */
+  .team-section {
+    max-width: 900px;
+    margin: auto;
+  }
+  .team-section h2 {
+    color: #0d1d60;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .team-section h1 {
+    color: #0d1d60;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #000; /* black background circle */
+  }
+  .member-info2 {
+    max-width: 500px;
+    text-align: right;
+  }
+  .member-info {
+    max-width: 500px;
+    text-align: left;
+  }
+  .member-info h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  .member-info h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  .member-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .member-info2 h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  .member-info2 h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  .member-info2 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }

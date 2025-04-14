@@ -1,0 +1,29 @@
+{% extends 'base.html' %}  <!-- Inherit from base template -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - About Us{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+    <h1>About ABTechVille</h1>
+    <p>ABTechVille is dedicated to empowering aspiring tech enthusiasts by providing industry-relevant training and career opportunities. We aim to bridge the gap between academic learning and real-world applications through innovative projects and mentorship programs.</p>
+</section>
+
+<section class="mission-vision">
+    <div class="card">
+        <h2>Our Vision</h2>
+        <p>To be a leading platform that nurtures innovation and skill development by integrating cutting-edge technologies and hands-on learning experiences, empowering the next generation of tech leaders.</p>
+    </div>
+
+    <div class="card">
+        <h2>Our Mission</h2>
+        <p>To equip students and professionals with the necessary skills to excel in the tech industry by providing expert mentorship, hands-on projects, and exposure to the latest advancements in IoT, AI, and software development.</p>
+    </div>
+</section>
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

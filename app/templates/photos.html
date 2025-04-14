@@ -1,0 +1,30 @@
+{% extends 'base.html' %}  <!-- Inherit from base.html -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - photos{% endblock %}
+
+
+{% block content %}
+<h1>ABTechVille Photo Gallery</h1>
+    
+    <div class="gallery-grid">
+        {% for photo in photos %}
+        <img src="{{ photo.image.url }}" alt="Gallery Image" class="gallery-item" onclick="openLightbox('{{ photo.image.url }}')">
+        {% endfor %}
+    </div>
+
+    <!-- Lightbox for Fullscreen Image View -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <span class="prev-btn" onclick="prevImage()">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+        <span class="next-btn" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    
+    
+
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}  <!-- Inherit from base.html -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - project{% endblock %}
+{% block css %}
+         
+{% endblock %}
+
+{% block content %}
+
+    <section class="workshop-gallery">
+        <h2>Our Workshops on</h2>
+        <div class="gallery-grid">
+            <div class="workshop-item">
+                <img src="{% static 'Images/project1.png' %}" alt="Workshop 1">
+              
+            </div>
+            <div class="workshop-item">
+                <img src="{% static 'Images/project2.png' %}" alt="Workshop 2">
+                
+            </div>
+            <div class="workshop-item">
+                <img src="{% static 'Images/project3.jpg' %}" alt="Workshop 3">
+                
+            </div>
+            <div class="workshop-item">
+                <img src="{% static 'Images/project4.jpg' %}" alt="Workshop 4">
+                
+            </div>
+
+    </section>
+    <section class="project-form">
+        <h2>Order Your Project</h2>
+        <form id="projectOrderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+            
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="confirmationMessage" style="display: none;">"Our team will review your request and contact you soon."</p>
+    </section>
+
+  
+    <script>
+        document.getElementById("projectOrderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+        
+            let orderData = {
+                name: document.getElementById("name").value,
+                phone: document.getElementById("phone").value,
+                productTitle: document.getElementById("title").value,
+                Type: document.getElementById("type").value,
+            };
+        
+            fetch("/send_order_email/", { // Django backend URL
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(orderData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("confirmationMessage").style.display = "block";
+                    document.getElementById("projectOrderForm").reset(); // Clear form fields
+                } else {
+                    alert("Error: " + data.error);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+        </script>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+

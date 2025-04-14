@@ -1,0 +1,124 @@
+.content-box {
+    background: linear-gradient(135deg, #1f2225, #005dbb);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgb(66, 66, 66);
+    font-family: 'Poppins', sans-serif;
+    
+}
+.content-box p {
+    font-size: 16px;
+    opacity: 1; /* Remove transparency */
+    color: white; /* Ensure text is white */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.content-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+
+
+/* Styling for the form */
+#careerForm {
+    background: white;
+    width: 70%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 17, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Checkbox Styling */
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Button Styling */
+button {
+    background: #004080;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #002d5a;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Confirmation Message */
+.hidden {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Form Submit Section */
+.form-submit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-box,
+    #careerForm {
+        width: 90%;
+    }
+}
+#confirmationMessage {
+    display: none;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
