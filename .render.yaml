@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: abtechville-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn ABTECHVILLE.wsgi"
+    plan: free
