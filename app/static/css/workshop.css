@@ -1,16 +1,16 @@
  /* General Styles */
- body {
+ /* body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     text-align: center;
     color: #333;
-}
+} */
 
 /* Heading Styles */
 h2 {
-    color: #222;
+    color: #080707;
     margin-bottom: 20px;
     font-size: 28px;
 }
@@ -103,7 +103,7 @@ label {
 }
 
 /* Input Fields */
-input, select, textarea {
+input,select,  textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -149,16 +149,6 @@ button:hover {
     }
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    text-align: center;
-    background: linear-gradient(45deg, rgb(116, 142, 255), rgb(255, 255, 255), rgb(116, 142, 255));
-    background-size: 300% 300%;
-    animation: gradientBackground 8s infinite alternate ease-in-out;
-}
 
 /* Workshop Section Background */
 .workshop-gallery {

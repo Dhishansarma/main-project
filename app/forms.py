@@ -1,5 +1,5 @@
 from django import forms
-from .models import Workshop, CareerApplication, ProjectOrder,Photo,RaspberryPiProject,NodemcuProject,ArduinoProject
+from .models import Workshop, CareerApplication, ProjectOrder,Photo,ArduinoProject,AWSProjects,WebDevelopmentprojects, Internship
 
 class WorkshopForm(forms.ModelForm):
     class Meta:
@@ -22,20 +22,24 @@ class Photoform(forms.ModelForm):
         model = Photo
         fields = '__all__'
 
-class rasproform(forms.ModelForm):
-    class Meta:
-        model = RaspberryPiProject
-        fields = '__all__'
-
-
-class Nodeform(forms.ModelForm):
-    class Meta:
-        model = NodemcuProject
-        fields = '__all__'
-
-
 class Ardunioform(forms.ModelForm):
     class Meta:
         model = ArduinoProject
         fields = '__all__'
 
+class AWSform(forms.ModelForm):
+    class Meta:
+        model = AWSProjects
+        fields = '__all__'
+
+
+class WebDevelopmentform(forms.ModelForm):
+    class Meta:
+        model = WebDevelopmentprojects
+        fields = '__all__'
+
+class InternshipForm(forms.ModelForm):
+    class Meta:
+        model = Internship
+        fields = ['name', 'mobile', 'email', 'college', 'location', 'address']
+        

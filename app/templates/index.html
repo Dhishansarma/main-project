@@ -13,24 +13,19 @@
     
     <div class="triangle"></div>
 
-      <div class="content">
-      <h1>ONE STOP SOLUTION FOR <b>IOT</b></h1>
-      <p>Revolutionizing your world with innovative IoT solutions.</p>
-      </div>
+    <div class="content3">
+      <h1 class="typing-effect"><span id="typed-text"></span><span class="cursor">|</span></h1>
+      <p class="subtext"><span id="typed-subtext"></span></p>
+    </div>
             <div class="carousel-container">
                     <div class="carousel">
                         <div class="carousel-slide active">
-                            <img src="{% static 'Images\Hyderabad\20240516184453_IMG_5561.JPG' %}" alt="Image 1">
+                            <img src="{% static 'Images\Image1.png' %}" alt="Image 1">
                         </div>
                         <div class="carousel-slide">
-                            <img src="{% static 'Images\Hyderabad\1000114834-01.jpeg' %}" alt="Image 2">
+                            <img src="{% static 'Images\image2.png' %}" alt="Image 2">
                         </div>
-                        <div class="carousel-slide">
-                            <img src="{% static 'Images\Hyderabad\20240516074040_IMG_5032.JPG' %}" alt="Image 3">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="{% static 'Images\Hyderabad\20240516074040_IMG_5032.JPG' %}" alt="Image 3">
-                        </div>
+                       
                         <div class="carousel-slide">
                             <img src="{% static 'Images\Hyderabad\20240516123858_IMG_5294.JPG' %}" alt="Image 3">
                         </div>
@@ -45,32 +40,38 @@
 <div class="stats-container">
     <div class="stat-card">
       <div class="icon">👤</div>
-      <div class="number">1 Mn.</div>
+      <div class="number" data-target="500000">0</div>
       <div class="label">STUDENTS</div>
     </div>
     
     <div class="stat-card">
       <div class="icon">📜</div>
-      <div class="number">2500+</div>
+      <div class="number" data-target="300">0</div>
       <div class="label">COLLEGES</div>
     </div>
     
     <div class="stat-card">
       <div class="icon">🏆</div>
-      <div class="number">50+</div>
+      <div class="number" data-target="25">0</div>
       <div class="label">COMPANIES</div>
     </div>
     
     <div class="stat-card">
       <div class="icon">🧑‍💻</div>
-      <div class="number">400K+</div>
+      <div class="number" data-target="500">0</div>
       <div class="label">INTERNS</div>
     </div>
     
     <div class="stat-card">
       <div class="icon">📦</div>
-      <div class="number">1500+</div>
+      <div class="number" data-target="10000">0</div>
       <div class="label">PROJECTS</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">📦</div>
+      <div class="number" data-target="30">0</div>
+      <div class="label">PRODUCTS</div>
     </div>
   </div>
   
@@ -79,13 +80,7 @@
     <div class="history-content">
         <p>At <strong>Abtech Ville LLP</strong>, we have been on an incredible journey of <strong>innovation, education, and technology transformation</strong>. Since our inception on <strong>January 21, 2021</strong>, in <strong>Hyderabad, Telangana</strong>, we have been dedicated to <strong>bridging the gap between academia and industry</strong> by providing students and professionals with the skills needed to excel in <strong>IoT, Web Development, and emerging technologies</strong>.</p>
         
-        <p>Our journey began with a strong vision to <strong>transform technology education</strong>. Officially registered as a <strong>Limited Liability Partnership (LLP)</strong> under the <strong>Registrar of Companies, Hyderabad</strong>, we were founded by <strong>Sai Akshay Buragadda and Baradwaj Arvapally</strong>. Their vision was to create an ecosystem where <strong>learning meets real-world applications</strong>, empowering students to become industry-ready professionals.</p>
-        
-        <p>Over the years, we have achieved remarkable milestones. We have collaborated with prestigious institutions like <strong>KG Reddy Engineering College</strong> to provide students with <strong>hands-on learning experiences</strong>. Our flagship event, <strong>“IoT Connected Minds: Ultimate Tech Experiences”</strong>, has provided practical exposure in <strong>IoT, Web Technologies, and AI</strong>, helping students develop critical skills and industry expertise.</p>
-        
-        <p>Our efforts have led to the <strong>growth of young innovators</strong> who have successfully transitioned into technical speakers, project developers, and tech leaders. By focusing on real-world applications and mentorship, we have nurtured a new generation of technology enthusiasts.</p>
-        
-        <p>🚀 Our commitment is to <strong>create a smarter, more connected world</strong> by continuing to <strong>empower students, professionals, and technology enthusiasts</strong> with the latest <strong>industry insights, practical experience, and mentorship opportunities</strong>. Join us as we continue to <strong>innovate, educate, and inspire the next generation of tech leaders!</strong></p>
+        <p>Our journey began with a strong vision to <strong>transform technology education</strong>. Officially registered as a <strong>Limited Liability Partnership (LLP)</strong> under the <strong>Registrar of Companies, Hyderabad</strong>, we were founded by <strong>Sai Akshay Buragadda and Baradwaj Arvapally</strong>. Their vision was to create an ecosystem where <strong>learning meets real-world applications</strong>, empowering students to become industry-ready professionals.</p>           
     </div>
 </section>
 
@@ -96,16 +91,17 @@
         <span>Stake</span>holders
     </div>
     <div class="cards" id="cardContainer">
-        <div class="card">
-            <h3>Employers</h3>
-            <p>TalenFarm’s streamlined recruitment connects you with skilled, industry-ready talent efficiently.</p>
-        </div>
+      <div class="card">
+        <h3>StartUp</h3>
+        <p>AbTech Ville connects startups with industry-ready innovators, fueling growth with fresh, future-focused talent.</p>
+    </div>
 
         <div class="card">
-            <h3>Mentors</h3>
-            <p>Empower the future workforce -- mentor with TalentFarm, guide aspiring professionals.</p>
+            <h3>Employees</h3>
+            <p>AbTech Ville’s streamlined recruitment connects you with innovative, industry-ready professionals in IoT and emerging technologies.</p>
         </div>
 
+       
         <div class="card">
             <h3>Student</h3>
             <p>Receive personalized learning for industry skills, mentorship, and career success with TalentFarm.</p>
@@ -119,23 +115,22 @@
     
 
     <!-- Projects Section (Second) -->
-    <h2>Projects</h2>
+    <h2 class="styled-heading">
+      <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
+    </h2>
+    
     <div class="grid">
         <div class="box">
-           <a href="{% url 'rasprojectli' %}"> <img src="{% static 'Images/raspberrypi.jpg'%}" alt="Raspberry Pi"></a>
-            <div class="name">Raspberry Pi</div>
+           <a href="{% url 'Webli' %}"> <img src="{% static 'Images/Weblogo.jpg'%}" alt="WebDevelopment"></a>
+            <div class="name">WebDevelopment</div>
         </div>
         <div class="box">
-            <a href="{% url 'nodeproli' %}"><img src="{% static 'Images/nodemcu.png'%}" alt="NodeMCU"></a>
-            <div class="name">NodeMCU</div>
+            <a href="{% url 'AWSli' %}"><img src="{% static 'Images/AWS-image.png'%}" alt="AWS"></a>
+            <div class="name">AWS</div>
         </div>
         <div class="box">
-            <a href="{% url 'ardproli' %}"><img src="{% static 'Images/arduino.jpg'%}" alt="Arduino"></a>
-            <div class="name">Arduino</div>
-        </div>
-        <div class="box">
-            <img src="{% static 'Images/others.jpg'%}" alt="Others">
-            <div class="name">Others</div>
+            <a href="{% url 'ardproli' %}"><img src="{% static 'Images/Iotimage.webp'%}" alt="Arduino"></a>
+            <div class="name">IOT</div>
         </div>
     </div>
 </section>
@@ -143,7 +138,7 @@
 <section class="cta-section">
     <div class="cta-container">
         <div class="cta-box">
-            For Workshop
+          Summer Internship
             <br>
             <button class="cta-button" onclick="window.location.href='{% url 'workshop' %}'">Click here</button>
         </div>
@@ -187,6 +182,71 @@
     createDots();
     showSlide(currentSlide);
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".number");
+
+      const formatValue = (value) => {
+        if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M+`;
+        if (value >= 100000) return `${(value / 1000).toFixed(0)}K+`;
+        if (value >= 1000) return `${value.toLocaleString()}+`;
+        return `${value}+`;
+      };
+
+      const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = 200;
+        const increment = target / speed;
+
+        const update = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = formatValue(Math.ceil(count));
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = formatValue(target);
+          }
+        };
+
+        update();
+      };
+
+      counters.forEach(counter => animateCounter(counter));
+    });
+    
+  
+  const headingText = "ONE STOP SOLUTION FOR IOT";
+  const subText = "Revolutionizing your world with innovative IoT solutions.";
+  const typedText = document.getElementById("typed-text");
+  const typedSubtext = document.getElementById("typed-subtext");
+
+  let hIndex = 0;
+  let pIndex = 0;
+
+  function typeHeading() {
+    if (hIndex < headingText.length) {
+      typedText.textContent += headingText.charAt(hIndex);
+      hIndex++;
+      setTimeout(typeHeading, 100);
+    } else {
+      setTimeout(typeParagraph, 500); // Delay before paragraph starts
+    }
+  }
+
+  function typeParagraph() {
+    if (pIndex < subText.length) {
+      typedSubtext.textContent += subText.charAt(pIndex);
+      pIndex++;
+      setTimeout(typeParagraph, 50);
+    }
+  }
+
+  // Start typing on page load
+  window.onload = () => {
+    typeHeading();
+  };
+
+
 </script>
 
 {% endblock %}

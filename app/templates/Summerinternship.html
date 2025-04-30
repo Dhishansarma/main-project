@@ -1,0 +1,80 @@
+{% extends 'base.html' %}  <!-- Inherit from base.html -->
+{% load static %}  <!-- Load static files -->
+
+{% block title %}ABTechVille - SummerInternship{% endblock %}
+
+
+{% block content %}
+
+    <div class="container5">
+        <div class="header">
+        <h1>IOT SUMMER INTERNSHIP 2025</h1>
+        <div class="sample"></div>
+        <div class="logo">
+          <img src="{% static 'images/ABLOGOREG .png' %}" alt="ABTechville Logo">
+        </div>
+        </div>
+  
+      <div class="sub-header">
+        Online 2–Months Program | Simulation | Industry Projects
+      </div>
+  
+      <div class="start-date">
+        Starts May 1st
+      </div>
+  
+      <div class="divider"></div>
+  
+      <div class="main-content">
+        <div class="left-section">
+          <div class="section-title">General Structure of IoT 2-Month Internship:</div>
+          <div class="topics">
+            <ul>
+              <li>
+               <h4> IoT Fundamentals</h4>
+                <span>Learn core concepts, architecture, and real-world applications of IoT across industries.</span>
+              </li>
+              <li>
+                <h4>Hardware Prototyping</h4>
+                <span>Hands-on with Arduino, Raspberry Pi, sensors, and actuators to build IoT devices.</span>
+              </li>
+              <li>
+              <h4>Cloud Integration</h4>
+                <span>Connect devices to cloud platforms for data collection and remote control.</span>
+              </li>
+              <li>
+            <h4> Data Analytics</h4>
+                <span>Process and visualize IoT data to extract meaningful insights.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="right-section">
+          <div class="register-box">
+            <h3>Register Now:</h3>
+            <a href="{% url 'workshop' %}" class="register-btn">Register Now</a>
+            <div class="contact-info">
+              +123-456-7890<br>
+              hello@reallygreatsite.com<br>
+              www.reallygreatsite.com
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="benefits">
+        <h2>WHAT YOU'LL GET</h2>
+        <div class="benefit-list">
+          <div class="benefit-item">Certificate</div>
+          <div class="benefit-item">5+ Projects</div>
+          <div class="benefit-item">Mentor Support</div>
+          <div class="benefit-item">Community Access</div>
+          <div class="benefit-item">Online Simulation</div>
+        </div>
+      </div>
+  
+    </div>
+  
+
+{% endblock %}

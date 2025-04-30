@@ -1,18 +1,20 @@
-/* body {
+body {
     font-family: 'Arial', sans-serif;
     background-color: #f9fbfd;
     margin: 0;
     padding: 20px;
     text-align: center;
-  } */
+  }
   .team-section {
     max-width: 900px;
     margin: auto;
+    text-align: center;
   }
   .team-section h2 {
     color: #0d1d60;
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    text-align: center;
   }
   .team-section h1 {
     color: #0d1d60;
@@ -27,8 +29,8 @@
     gap: 40px;
   }
   .team-member img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #fff;
@@ -45,33 +47,36 @@
   }
   .member-info h3 {
     font-size: 24px;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 5px;
   }
   .member-info h4 {
     font-size: 18px;
-    color: #555;
+    color: #dfdfdf;
     margin-bottom: 20px;
     font-weight: normal;
   }
   .member-info p {
     font-size: 16px;
-    color: #555;
+    color:     #ffffff;;
     line-height: 1.6;
+    text-align: justify;
   }
   .member-info2 h3 {
     font-size: 24px;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 5px;
   }
   .member-info2 h4 {
     font-size: 18px;
-    color: #555;
+    color: #dfdfdf;
     margin-bottom: 20px;
     font-weight: normal;
   }
   .member-info2 p {
     font-size: 16px;
-    color: #555;
+    color: #dfdfdf;
     line-height: 1.6;
+    text-align: justify;
+
   }

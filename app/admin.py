@@ -2,21 +2,21 @@
 
 # Register your models here.
 from django.contrib import admin
-from .models import  Workshop, CareerApplication, ProjectOrder,Photo,RaspberryPiProject,NodemcuProject,ArduinoProject
+from .models import  Workshop, CareerApplication, ProjectOrder,Photo,ArduinoProject,AWSProjects,WebDevelopmentprojects, Internship
 
 # Custom Admin Display for Projects
 # class ProjectAdmin(admin.ModelAdmin):
 #     list_display = ('id', 'name', 'description', 'created_at')
 #     search_fields = ('name',)
 
-class RaspberryPiAdmin(admin.ModelAdmin):
-    list_display = ('title','image','description1','description2','Price')
+class AWSAdmin(admin.ModelAdmin):
+    list_display = ('title','title_image','description1')
 
-class NodeMCUAdmin(admin.ModelAdmin):
-    list_display = ('title','image','description1','description2','Price')
+class WebDevelopmentAdmin(admin.ModelAdmin):
+    list_display = ('title','title_image','description1')
 
 class ArduinoAdmin(admin.ModelAdmin):
-    list_display = ('title','image','description1','description2','Price')
+    list_display = ('title','title_image','description1')
 
 class WorkshopAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'mobile', 'email', 'course')
@@ -30,14 +30,17 @@ class ProjectOrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'email', 'project', 'project_type', 'title')
     search_fields = ('name', 'email')
 
-
+class InternshipAdmin(admin.ModelAdmin):
+    list_display = ( 'name', 'email', 'mobile')
+    search_fields = ('name', 'email')
 
 # Registering Models
 # admin.site.register(Project, ProjectAdmin)
-admin.site.register(RaspberryPiProject, RaspberryPiAdmin)
-admin.site.register(NodemcuProject, NodeMCUAdmin)
+admin.site.register(AWSProjects, AWSAdmin)
+admin.site.register(WebDevelopmentprojects, WebDevelopmentAdmin)
 admin.site.register(ArduinoProject, ArduinoAdmin)
 admin.site.register(Workshop, WorkshopAdmin)
 admin.site.register(CareerApplication, CareerAdmin)
 admin.site.register(ProjectOrder, ProjectOrderAdmin)
 admin.site.register(Photo)
+admin.site.register(Internship,InternshipAdmin)

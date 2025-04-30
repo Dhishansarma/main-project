@@ -5,10 +5,9 @@
 
 {% block content %}
 <div class="containerpro">
-    <div class="layer">
         <div class="projectcon">
             <div class="image-section">
-                <img src="{{ ardinoprojects.image.url|default:'/static/images/placeholder.jpg' }}" 
+                <img src="{{ ardinoprojects.title_image.url|default:'/static/images/placeholder.jpg' }}" 
                      alt="{{ ardinoprojects.title }}">
             </div>
             <!-- Title and Components (Left) and Image (Right) -->
@@ -19,7 +18,7 @@
                 <div class="components">
                     <h3>Components</h3>
                     <ul>
-                        {% if component_list %}
+                        {% if component %}
                             {% for component in component %}
                                 <li>{{ component }}</li>
                             {% empty %}
@@ -37,9 +36,46 @@
     
         <!-- Description Section (Below the Whole Block) -->
         <div class="description-box">
-            <p>{{ ardinoprojects.description|safe  }}</p>
+            <h1 class="headin">Description :</h1>
+            <p>{{ ardinoprojects.description1|safe  }}</p>
         </div>
     
-        <a href="{% url 'project' %}" class="buy-button">Buy</a>
+        <a href="{% url 'project' %}?title={{ ardinoprojects.title|urlencode }}" class="buy-button">Buy</a>
     </div>
+
+
+    <script>
+        function openFullscreen(imgElement) {
+            // Create a full-screen div
+            var fullscreenDiv = document.createElement('div');
+            fullscreenDiv.style.position = 'fixed';
+            fullscreenDiv.style.top = 0;
+            fullscreenDiv.style.left = 0;
+            fullscreenDiv.style.width = '100vw';
+            fullscreenDiv.style.height = '100vh';
+            fullscreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            fullscreenDiv.style.display = 'flex';
+            fullscreenDiv.style.alignItems = 'center';
+            fullscreenDiv.style.justifyContent = 'center';
+            fullscreenDiv.style.zIndex = 9999;
+            fullscreenDiv.style.cursor = 'pointer';
+        
+            // Create a full-size image inside that div
+            var fullscreenImg = document.createElement('img');
+            fullscreenImg.src = imgElement.src;
+            fullscreenImg.style.maxWidth = '90%';
+            fullscreenImg.style.maxHeight = '90%';
+            fullscreenImg.style.borderRadius = '10px';
+            fullscreenImg.style.boxShadow = '0 0 30px rgba(255,255,255,0.2)';
+        
+            // When user clicks anywhere, close the fullscreen
+            fullscreenDiv.onclick = function() {
+                document.body.removeChild(fullscreenDiv);
+            };
+        
+            fullscreenDiv.appendChild(fullscreenImg);
+            document.body.appendChild(fullscreenDiv);
+        }
+        </script>
+</div>   
  {% endblock %}

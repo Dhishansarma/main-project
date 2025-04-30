@@ -1,11 +1,4 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    text-align: center;
-    color: #333;
-}
+
 
 /* Heading Styles */
 h2 {
@@ -17,7 +10,7 @@ h2 {
 /* Workshop Gallery Section */
 .workshop-gallery {
     padding: 40px 20px;
-    background: #fff;
+    /* background: #fff; */
 }
 
 /* Gallery Grid Layout */
@@ -93,21 +86,10 @@ h2 {
     }
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    text-align: center;
-    background: linear-gradient(45deg, rgb(116, 142, 255), rgb(255, 255, 255), rgb(116, 142, 255));
-    background-size: 300% 300%;
-    animation: gradientBackground 8s infinite alternate ease-in-out;
-}
-
 /* Workshop Section Background */
 .workshop-gallery {
     padding: 40px 20px;
-    background: linear-gradient(45deg, rgb(116, 142, 255), rgb(255, 255, 255), rgb(116, 142, 255));
+    /* background: linear-gradient(45deg, rgb(116, 142, 255), rgb(255, 255, 255), rgb(116, 142, 255)); */
     background-size: 300% 300%;
     animation: gradientBackground 8s infinite alternate ease-in-out;
     border-radius: 10px;
@@ -115,7 +97,7 @@ body {
 
 /* Smooth Workshop Grid Background */
 .gallery-grid {
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     border-radius: 10px;
     padding: 20px;
 }

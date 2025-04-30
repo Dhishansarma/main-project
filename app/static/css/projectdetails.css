@@ -1,22 +1,25 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+     margin: 0;
+    padding: 0; 
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff42;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .hi {
     text-align: center;
     color: #333;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .grid {
     padding-top: 100px;

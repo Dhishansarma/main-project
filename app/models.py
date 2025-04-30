@@ -48,45 +48,41 @@ class Photo(models.Model):
     def __str__(self):
         return self.image.name
 
-class RaspberryPiProject(models.Model):
-    title = models.CharField(max_length=200)
-    description1 = models.TextField()
-    description2 = models.TextField(default="Default Description")
-    Price = models.IntegerField(default=0)
-    component=models.CharField(max_length=200, default="Default Component")
-    image = models.ImageField(upload_to='rasprojectsli/',null=True, blank=True)
-    image2= models.ImageField(upload_to='rasprojectsli/',null=True, blank=True)
-
-
-    def __str__(self):
-        return self.title
-
-
-class NodemcuProject(models.Model):
-    title = models.CharField(max_length=200)
-    description1 = models.TextField()
-    description2 = models.TextField(default="Default Description")
-    Price = models.IntegerField(default=0)
-    component=models.CharField(max_length=200, default="Default Component")
-    image = models.ImageField(upload_to='Nodeproli/',null=True, blank=True)
-    image2 = models.ImageField(upload_to='Nodeproli/',null=True, blank=True)
-
-
-
-    def __str__(self):
-        return self.title
-
 
 class ArduinoProject(models.Model):
     title = models.CharField(max_length=200)
-    description1 = models.TextField()
-    description2 = models.TextField(default="Default Description")
-    Price = models.IntegerField(default=0)
+    description1 = models.TextField()    
     component=models.CharField(max_length=200, default="Default Component")
-    image = models.ImageField(upload_to='ardproli',null=True, blank=True)
-    image2 = models.ImageField(upload_to='ardproli',null=True, blank=True)
-
-
-
+    title_image = models.ImageField(upload_to='ardproli',null=True, blank=True)
+   
     def __str__(self):
         return self.title
+
+class AWSProjects(models.Model):
+    title = models.CharField(max_length=200)
+    description1 = models.TextField()
+    
+    Requirements=models.CharField(max_length=200, default="Default Component")
+    title_image = models.ImageField(upload_to='ardproli',null=True, blank=True)
+   
+    def __str__(self):
+        return self.title
+
+
+class WebDevelopmentprojects(models.Model):
+    title = models.CharField(max_length=200)
+    description1 = models.TextField()
+    Requirements=models.CharField(max_length=200, default="Default Component")
+    title_image = models.ImageField(upload_to='ardproli',null=True, blank=True)
+    
+    def __str__(self):
+        return self.title
+
+class Internship(models.Model):
+    name = models.CharField(max_length=100)
+    mobile = models.CharField(max_length=15)
+    email = models.EmailField()
+    college = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    address = models.TextField()
+    

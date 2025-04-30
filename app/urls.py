@@ -11,14 +11,19 @@ urlpatterns = [
     path('about/', views.about_view, name='about'),
     path('event/', views.event, name='event'),
     path('photo/', views.photo, name='photo'),
-    path('rasprojectli', views.rasproject_list, name='rasprojectli'),
-    path('nodeprodetails/<int:project_id>/', views.Nodeproject_list, name='nodeprodetails'),
+    path('AWSli', views.AWS, name='AWSli'),
+    path('Weblidetails/<int:project_id>/', views.WebDevelopment_list, name='Weblidetails'),
     path('ardinoprodetails/<int:project_id>/', views.ardiproject_list, name='ardinoprodetails'),
-    path('rasprodetails/<int:project_id>/', views.rasprodet, name='rasprodetails'),
+    path('AWSlidet/<int:project_id>/', views.AWS_list, name='AWSlidet'),
     path("send_order_email/", views.send_project_email, name="send_order_email"),
     path('ardproli', views.ardiproject, name='ardproli'),
-    path('nodeproli', views.nodeproject, name='nodeproli'),
+    path('Webli', views.WebDevelopment, name='Webli'),
     path("team/", views.team, name="team"),
+    path('internship-registration/', views.internship_registration, name='internship-registration'),
+    path("internship/", views.Internship, name="internship"),
+    
+
+
 
 
 

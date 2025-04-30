@@ -1,20 +1,10 @@
-  /* Global Styles */
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-
-
-
-
+  /* Global Style
 /* Event List Styles */
 
+body{
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b); /* Modern gradient */
 
+}
 /* Hero Section */
 /* .hero {
     width: 100%;
@@ -31,12 +21,14 @@ body {
     /* background-color: #f4f7f9; */
     padding: 60px 20px;
     text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .history-title {
     font-size: 2.5em;
     font-weight: 600;
-    color: #003366;
+    color: #010406;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -63,7 +55,7 @@ body {
     margin: 0 auto;
     font-size: 1.1em;
     line-height: 1.8;
-    color: #555;
+    color:#0a1c61;
     padding: 0 20px;
 }
 
@@ -114,7 +106,7 @@ body {
 
 /* Main container */
 .main-box {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 20px auto;
     padding: 20px;
     background-color: #f4f4f9;
@@ -144,8 +136,9 @@ body {
 } */
 
 .history-container {
+    background: rgba(255, 255, 255, 0.063);
     position: relative;
-    padding: 60px 20px;
+    padding: 60px 30px;
     text-align: center;
     overflow: hidden;
     /* animation: waveTransition 6s infinite alternate ease-in-out; */
@@ -173,13 +166,27 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    padding-bottom: 30px;
 }
+.styled-heading span {
+    color: black; /* default color */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 
+        -0.5px -0.5px 0 #ffffff,  
+        0.5px -0.5px 0 #ffffff,  
+        1px 1px 0 #ffffff,  
+        1px 1px 0 #ffffff; 
+  }
+  
+  
+  
 
 /* Individual Box Styling */
 .box {
-    background: white;
+    background: rgba(255, 255, 255, 0.564);
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -360,7 +367,7 @@ body {
 .history-container {
     padding: 60px 20px;
     text-align: center;
-    animation: historyBgTransition 6s infinite alternate ease-in-out;
+    /* animation: historyBgTransition 6s infinite alternate ease-in-out; */
 }
 
 
@@ -509,7 +516,7 @@ main {
     padding: 40px;
     background: #e3edf7;
     border-radius: 15px;
-    box-shadow: 8px 8px 16px #bcc6d7, -8px -8px 16px #ffffff;
+    /* box-shadow: 8px 8px 16px #bcc6d7, -8px -8px 16px #ffffff; */
     transition: all 0.3s ease-in-out;
     margin: auto;
 }
@@ -532,7 +539,7 @@ h1 {
 p {
     text-align: center;
     font-size: 18px;
-    color: #555;
+    /* color: #555; */
     margin-bottom: 30px;
 }
 
@@ -682,7 +689,7 @@ button:hover {
 
 /* General reset */
 /* General reset */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -692,5 +699,5 @@ body {
     font-family: Arial, sans-serif;
     background: white;
     color: #fff;
-}
+} */
 

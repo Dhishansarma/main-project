@@ -1,11 +1,11 @@
 {% extends 'base.html' %}  <!-- Inherit from base.html -->
 {% load static %}  <!-- Load static files -->
 
-{% block title %}ABTechVille - RaspberrypiProjects{% endblock %}
+{% block title %}ABTechVille - WebDevelopmentProjects{% endblock %}
 
 
 {% block content %}
-<h1 class="hi">ABTechVille - NoddemcuProjects</h1>
+<h1 class="hi">ABTechVille - WebDevelopmentprojects</h1>
 <div class="container">
     
 
@@ -13,10 +13,10 @@
         {% for noproject in noprojects %}
             <div class="box">
                
-                    <a href="{% url 'nodeprodetails' noproject.id %}">
-                        <img src="{{ noproject.image.url }}" alt="{{ project.title }}">
+                    <a href="{% url 'Weblidetails' noproject.id %}">
+                        <img src="{{ noprojects.title_image.url }}" alt="{{ project.title }}">
                 </a>
-                    <div class="name"><h2>{{ noproject.title }}</h2></div>
+                    <div class="name"><h2>{{ noprojects.title }}</h2></div>
                 
             </div>
         {% endfor %}

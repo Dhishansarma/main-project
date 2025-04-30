@@ -17,6 +17,10 @@
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    transition: transform 0.1s ease
+  }
+  .stat-card:hover {
+    transform: translateY(-5px);
   }
   
   .icon {

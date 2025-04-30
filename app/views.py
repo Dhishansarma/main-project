@@ -1,13 +1,20 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Photo,RaspberryPiProject,NodemcuProject,ArduinoProject
-from .forms import WorkshopForm, CareerForm, ProjectOrderForm,Photoform,rasproform,Nodeform
+from django.shortcuts import render, get_object_or_404,redirect
+from .models import Photo,ArduinoProject,AWSProjects,WebDevelopmentprojects
+from .forms import WorkshopForm, CareerForm, ProjectOrderForm,Photoform,InternshipForm
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+
 import json
 
 def home(request):
     return render(request, "index.html")
+
+def Internship(request):
+    return render(request,"SummerInternship.html")
 
 def workshop(request):
     if request.method == "POST":
@@ -50,25 +57,25 @@ def photo(request):
     photos = Photo.objects.all()
     return render(request, 'Photos.html', {'photos': photos})
 
-def rasproject_list(request):
-    projects = RaspberryPiProject.objects.all()
-    return render(request, 'raspro.html', {'projects': projects})
+def AWS(request):
+    projects = AWSProjects.objects.all()
+    return render(request, 'AWS.html', {'projects': projects})
 
 def ardiproject(request):
     projects2 = ArduinoProject.objects.all()
     return render(request, 'ardopro.html', {'ardprojects': projects2})
 
-def nodeproject(request):
-    projects3 = NodemcuProject.objects.all()
-    return render(request, 'nodepro.html', {'noprojects': projects3})
+def WebDevelopment(request):
+    projects3 = WebDevelopmentprojects.objects.all()
+    return render(request, 'WebDevelopment.html', {'noprojects': projects3})
 
-def Nodeproject_list(request, project_id):
-    nodeprojects = get_object_or_404(NodemcuProject, id=project_id)
-    if isinstance(nodeprojects.component, str):
-        component_list = [c.strip() for c in nodeprojects.component.split(",")]
+def AWS_list(request, project_id):
+    awsprojects = get_object_or_404(AWSProjects, id=project_id)
+    if isinstance(awsprojects.Requirements, str):
+        component_list = [c.strip() for c in awsprojects.Requirements.split(",")]
     else:
-        component_list = nodeprojects.component
-    return render(request, 'nodeprodetails.html', {'nodeprojects': nodeprojects, 'components': component_list})
+        component_list = awsprojects.Requirements
+    return render(request, 'AWSdetails.html', {'awsprojects': awsprojects, 'components': component_list})
 
 def ardiproject_list(request, project_id):
     ardoprojects = get_object_or_404(ArduinoProject, id=project_id)
@@ -78,13 +85,13 @@ def ardiproject_list(request, project_id):
         component_list = ardoprojects.component
     return render(request, 'ardoprodetails.html', {'ardinoprojects': ardoprojects, 'component': component_list})
 
-def rasprodet(request, project_id):
-    raspberry_project = get_object_or_404(RaspberryPiProject, id=project_id)
-    if isinstance(raspberry_project.component, str):
-        component_list = [c.strip() for c in raspberry_project.component.split(",")]
+def WebDevelopment_list(request, project_id):
+    WebDevelopment_project = get_object_or_404(WebDevelopmentprojects, id=project_id)
+    if isinstance(WebDevelopment_project.Requirements, str):
+        component_list = [c.strip() for c in WebDevelopment_project.Requirements.split(",")]
     else:
-        component_list = raspberry_project.component
-    return render(request, 'rasprodetails.html', {'raspberry_project': raspberry_project,
+        component_list = WebDevelopment_project.Requirements
+    return render(request, 'WebDevelopmentdetails.html', {' WebDevelopment_project': WebDevelopment_project,
         'component_list': component_list })
 
 @csrf_exempt  # Disable CSRF for simplicity (only use if necessary)
@@ -119,3 +126,14 @@ def send_project_email(request):
 
 def team(request):
     return render(request, "Team.html")
+
+@csrf_exempt  # Only for development
+def internship_registration(request):
+    if request.method == "POST":
+        form = InternshipForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'errors': form.errors}, status=400)
+    return JsonResponse({'success': False, 'error': 'Invalid method'})
